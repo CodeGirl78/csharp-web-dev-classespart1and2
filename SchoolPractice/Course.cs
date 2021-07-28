@@ -4,17 +4,17 @@ using System.Text;
 
 namespace SchoolPractice
 {
-    class Course
+    public class Course
     {
         public string Instructor { get; set; }
         public string CourseName { get; set; }
-        public List<Student> Students { get; set; }
+        public List<Student> Student { get; set; }
 
-        public Course(string instructor, string name, List<Student> students)
+        public Course(string instructor, string name, List<Student> student)
         {
             Instructor = instructor;
             CourseName = name;
-            Students = students;
+            Student = student;
         }
     }
 }
