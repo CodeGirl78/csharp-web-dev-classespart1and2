@@ -68,6 +68,15 @@ namespace SchoolPractice
 
         // TODO: Add your custom 'Equals' method here. Consider which fields should match in order to call two
         //  Student objects equal.
+        public override bool Equals(object obj)
+        {
+            return obj is Student student &&
+                   StudentId == student.StudentId;
+        }
 
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(StudentId);
+        }
     }
 }
