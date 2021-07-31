@@ -30,5 +30,15 @@ namespace SchoolPractice
 
         // TODO: Add your custom 'Equals' method here. Consider which fields should match in order to call two
         //  Course objects equal.
+
+        public override string ToString()
+        {
+            string courseString = "Course: " + Topic + "\nTeacher: " + Instructor.FirstName + " " + Instructor.LastName + "\nStudents:\n";
+            foreach (Student s in enrolledStudents)
+            {
+                courseString += s.Name + "\n";
+            }
+            return courseString;
+        }
     }
 }
